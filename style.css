@@ -30,6 +30,13 @@ body {
   grid-area: six
 }
 
+.bottom {
+  grid-area: bottom;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
 
 .div-wrapper {
   display: grid;
@@ -44,13 +51,6 @@ body {
   gap: 12px;
   padding: 20px;
   color: #fff; 
-}
-
-.bottom {
-  grid-area: bottom;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
 }
 
 
