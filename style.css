@@ -59,6 +59,17 @@ body {
   transition: 0.9s;
 }
 
+.grid-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.grid-link:hover {
+  cursor: pointer;
+}
+
+
 img {
   max-width: 100%;
   height: auto;
