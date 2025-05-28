@@ -6,6 +6,30 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+.one {
+  grid-area: one
+}
+
+.two {
+  grid-area: two
+}
+
+.three {
+  grid-area: three
+}
+
+.four {
+  grid-area: four
+}
+
+.five {
+  grid-area: five
+}
+
+.six {
+  grid-area: six
+}
+
 
 .div-wrapper {
   display: grid;
@@ -34,31 +58,6 @@ body {
   background-color: #DA667B;
   transition: 0.9s;
 }
-
-.one {
-  grid-area: one
-}
-
-.two {
-  grid-area: two
-}
-
-.three {
-  grid-area: three
-}
-
-.four {
-  grid-area: four
-}
-
-.five {
-  grid-area: five
-}
-
-.six {
-  grid-area: six
-}
-
 
 img {
   max-width: 100%;
