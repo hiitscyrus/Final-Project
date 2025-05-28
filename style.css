@@ -55,7 +55,7 @@ body {
 
 .div-wrapper > div:hover {
   transform: scale(1.02);
-  background-color: #DA667B;
+  background-color: #084887;
   transition: 0.9s;
 }
 
@@ -71,7 +71,7 @@ img {
 h1 {
   margin-top: 0;
   font-weight: 700;
-  font-size: 2.5rem;
+  font-size: 3.0rem;
   color: #ffffff;
 }
 
