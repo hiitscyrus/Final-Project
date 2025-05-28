@@ -46,19 +46,7 @@ body {
   color: #fff; 
 }
 
-.div-wrapper > a {
-  border-radius: 10px;
-  padding: 15px;
-  background-color: #4F83CC;
-  border: 2px solid black;
-}
-
-.div-wrapper > a:hover {
-  transform: scale(1.02);
-  background-color: #084887;
-  transition: 0.9s;
-}
-
+.div-wrapper > a
 .div-wrapper > div {
   border-radius: 10px;
   padding: 15px;
@@ -66,6 +54,7 @@ body {
   border: 2px solid black;
 }
 
+.div-wrapper > a:hover
 .div-wrapper > div:hover {
   transform: scale(1.02);
   background-color: #084887;
