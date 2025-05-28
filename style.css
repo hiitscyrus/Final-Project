@@ -59,6 +59,20 @@ body {
   transition: 0.9s;
 }
 
+.div-wrapper > div {
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #4F83CC;
+  border: 2px solid black;
+}
+
+.div-wrapper > div:hover {
+  transform: scale(1.02);
+  background-color: #084887;
+  transition: 0.9s;
+}
+
+
 .grid-link {
   text-decoration: none;
   color: inherit;
