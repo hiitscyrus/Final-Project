@@ -46,14 +46,14 @@ body {
   color: #fff; 
 }
 
-.div-wrapper > div {
+.div-wrapper > a {
   border-radius: 10px;
   padding: 15px;
   background-color: #4F83CC;
   border: 2px solid black;
 }
 
-.div-wrapper > div:hover {
+.div-wrapper > a:hover {
   transform: scale(1.02);
   background-color: #084887;
   transition: 0.9s;
