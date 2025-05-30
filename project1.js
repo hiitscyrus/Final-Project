@@ -32,7 +32,7 @@ function compare() {
   }
 
   document.getElementById('result').textContent = resultText;
-  document.getElementById('replay').style.display = 'inline-block';
+  document.getElementById('play-again').style.display = 'inline-block';
   document.querySelectorAll('.buttons button').forEach(btn => btn.disabled = true);
 }
 
@@ -40,6 +40,6 @@ function resetGame() {
   playerChoice = '';
   compChoice = '';
   document.getElementById('result').textContent = '';
-  document.getElementById('replay').style.display = 'none';
+  document.getElementById('play-again').style.display = 'none';
   document.querySelectorAll('.buttons button').forEach(btn => btn.disabled = false);
 }
