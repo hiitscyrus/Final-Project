@@ -4,47 +4,34 @@ let compChoice = '';
 function playerSelect(choice) {
   playerChoice = choice;
   game();
-  if (playerChoice === 'rock' || playerChoice === 'paper' || playerChoice === 'scissors') {
+  if (['rock', 'paper', 'scissors'].includes(playerChoice)) {
     compare();
   }
 }
 
 function game() {
-  if (playerChoice === 'rock' || playerChoice === 'paper' || playerChoice === 'scissors') {
-    comp();
-  } 
-  else {
-    document.getElementById('result').textContent = "Invalid Player Move!";
-  }
-}
-
-function comp() {
-  const rand = Math.floor(Math.random() * 3);
-  if (rand === 0) compChoice = 'rock';
-  else if (rand === 1) compChoice = 'paper';
-  else compChoice = 'scissors';
+  const options = ['rock', 'paper', 'scissors'];
+  compChoice = options[Math.floor(Math.random() * 3)];
 }
 
 function compare() {
-  let message = `The computer chose ${compChoice}, `;
+  let resultText = `Computer chose ${compChoice}. `;
 
-  if (playerChoice === 'paper') {
-    if (compChoice === 'rock') message += "you win!";
-    else if (compChoice === 'scissors') message += "you lose!";
-    else message += "tie game!";
+  if (playerChoice === compChoice) {
+    resultText += "It's a tie!";
   } 
-  else if (playerChoice === 'rock') {
-    if (compChoice === 'rock') message += "tie game!";
-    else if (compChoice === 'scissors') message += "you win!";
-    else message += "you lose!";
+  else if (
+    (playerChoice === 'rock' && compChoice === 'scissors') ||
+    (playerChoice === 'paper' && compChoice === 'rock') ||
+    (playerChoice === 'scissors' && compChoice === 'paper')
+  ) {
+    resultText += "You win!";
   } 
   else {
-    if (compChoice === 'rock') message += "you lose!";
-    else if (compChoice === 'scissors') message += "tie game!";
-    else message += "you win!";
+    resultText += "You lose!";
   }
 
-  document.getElementById('result').textContent = message;
+  document.getElementById('result').textContent = resultText;
   document.getElementById('replay').style.display = 'inline-block';
   document.querySelectorAll('.buttons button').forEach(btn => btn.disabled = true);
 }
