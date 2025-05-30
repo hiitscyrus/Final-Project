@@ -7,9 +7,9 @@ function play(userChoice) {
   if (userChoice === computerChoice) {
     result = "It's a tie!";
   } else if (
-    (userChoice === 'rock' && computerChoice === 'cissors') ||
+    (userChoice === 'rock' && computerChoice === 'scissors') ||
     (userChoice === 'paper' && computerChoice === 'rock') ||
-    (userChoice === 'cissors' && computerChoice === 'paper')
+    (userChoice === 'scissors' && computerChoice === 'paper')
   ) {
     result = `You win! ${userChoice} beats ${computerChoice}.`;
   } else {
