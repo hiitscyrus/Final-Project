@@ -1,28 +1,71 @@
-function play(userChoice) {
-  const choices = ['rock', 'paper', 'scissors'];
-  const computerChoice = choices[Math.floor(Math.random() * 3)];
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rock Paper Scissors Game</title>
+</head>
+<body>
+  <script>
+    let playerChoice = '';
+    let compChoice = '';
 
-  let result = '';
+    function comp() {
+      const rand = Math.floor(Math.random() * 3);
+      if (rand === 0) compChoice = 'rock';
+      else if (rand === 1) compChoice = 'paper';
+      else compChoice = 'scissors';
+    }
 
-  if (userChoice === computerChoice) {
-    result = "It's a tie!";
-  } else if (
-    (userChoice === 'rock' && computerChoice === 'scissors') ||
-    (userChoice === 'paper' && computerChoice === 'rock') ||
-    (userChoice === 'scissors' && computerChoice === 'paper')
-  ) {
-    result = `You win! ${userChoice} beats ${computerChoice}.`;
-  } else {
-    result = `You lose! ${computerChoice} beats ${userChoice}.`;
-  }
+    function game() {
+      if (playerChoice === 'rock' || playerChoice === 'paper' || playerChoice === 'scissors') {
+        comp(); // pick computer's move
+      } else {
+        alert("Invalid Player Move!");
+        return; // exit game early
+      }
+    }
 
-  document.getElementById('result').textContent = result;
-  document.querySelectorAll('.buttons button').forEach(btn => btn.disabled = true);
-  document.getElementById('play-again').style.display = 'inline-block';
-}
+    function compare() {
+      if (playerChoice === 'paper') {
+        if (compChoice === 'rock') {
+          alert(`The computer chose ${compChoice}, you win!`);
+        } else if (compChoice === 'scissors') {
+          alert(`The computer chose ${compChoice}, you lose!`);
+        } else {
+          alert(`The computer chose ${compChoice}, tie game!`);
+        }
+      } else if (playerChoice === 'rock') {
+        if (compChoice === 'rock') {
+          alert(`The computer chose ${compChoice}, tie game!`);
+        } else if (compChoice === 'scissors') {
+          alert(`The computer chose ${compChoice}, you win!`);
+        } else {
+          alert(`The computer chose ${compChoice}, you lose!`);
+        }
+      } else {
+        if (compChoice === 'rock') {
+          alert(`The computer chose ${compChoice}, you lose!`);
+        } else if (compChoice === 'scissors') {
+          alert(`The computer chose ${compChoice}, tie game!`);
+        } else {
+          alert(`The computer chose ${compChoice}, you win!`);
+        }
+      }
+    }
 
-function resetGame() {
-  document.getElementById('result').textContent = '';
-  document.querySelectorAll('.buttons button').forEach(btn => btn.disabled = false);
-  document.getElementById('play-again').style.display = 'none';
-}
+    // main logic
+    const play = prompt("Do you wanna play?").toLowerCase();
+
+    if (play === "yes") {
+      alert("Rock, paper, scissors, shoot!");
+      playerChoice = prompt("Enter your move (rock, paper, or scissors):").toLowerCase();
+      game();
+      if (playerChoice === 'rock' || playerChoice === 'paper' || playerChoice === 'scissors') {
+        compare();
+      }
+    } else {
+      alert("Okay! Bye!");
+    }
+  </script>
+</body>
+</html>
