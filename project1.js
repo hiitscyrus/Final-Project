@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Rock Paper Scissors Game</title>
-</head>
-<body>
-  <script>
     let playerChoice = '';
     let compChoice = '';
 
@@ -53,7 +45,6 @@
       }
     }
 
-    // main logic
     const play = prompt("Do you wanna play?").toLowerCase();
 
     if (play === "yes") {
@@ -66,6 +57,3 @@
     } else {
       alert("Okay! Bye!");
     }
-  </script>
-</body>
-</html>
